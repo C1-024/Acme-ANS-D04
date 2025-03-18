@@ -1,4 +1,4 @@
-key,key:userAccount,identifierNumber,yearsOfExperience,birth,link,draftMode
+key,key:userAccount,identifierNumber,yearsOfExperience,birth,picture,draftMode
 manager-01,user-account-manager-01,"CB182937",7,2000/06/18 00:00,"http://kawasaki.com/zxr",true
 manager-02,user-account-manager-02,"GS477796",2,2000/06/18 00:00,"http://kawasaki.com/zxr",true
 manager-03,user-account-manager-03,"MC454396",6,2000/06/18 00:00,"http://kawasaki.com/zxr",true
