@@ -17,8 +17,6 @@ import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
-import acme.constraints.ValidPhone;
-import acme.datatypes.Phone;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -63,10 +61,15 @@ public class Airline extends AbstractEntity {
 	@Automapped
 	private String				email;
 
+	//	@Mandatory
+	//	@ValidPhone
+	//	@Automapped
+	//	private Phone				phoneNumber;
+
 	@Mandatory
-	@ValidPhone
+	@ValidString
 	@Automapped
-	private Phone				phoneNumber;
+	private String				phoneNumber;
 
 	@Mandatory
 	@Valid

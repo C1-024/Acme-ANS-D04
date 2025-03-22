@@ -1,0 +1,11 @@
+key,name,code,website,type,foundationMoment,email,phoneNumber,draftMode
+airline-001,<marquee>Hacked</marquee>,AXX,https://www.hackedairlines.com,LOWCOST,2000/01/01 00:00,hacked@example.com,+18001234567,true
+airline-002,洛伦·伊普森,BYX,https://www.loreni.com,STANDARD,2010/05/15 12:30,loren@example.cn,+86109876543,true
+airline-003,Standard Airlines,CZX,https://www.standardairlines.com,STANDARD,2000/07/20 08:45,contact@standardairlines.com,+44207654321,true
+airline-004,Economy Flights,DXX,https://www.economyflights.com,LOWCOST,2018/11/11 16:00,,+493012345678,true
+airline-005,Luxury Wings,EXX,https://www.luxurywings.com,LUXURY,2005/03/27 10:15,luxury@example.com,+33123456789,true
+airline-006,Business Jet,FXX,https://www.businessjet.com,LUXURY,2000/02/10 14:30,contact@businessjet.com,+8138765432,true
+airline-007,Budget Airways,GXX,https://www.budgetairways.com,LOWCOST,2008/06/05 07:00,,+34911234567,true
+airline-008,FastFly Airlines,HXX,https://www.fastfly.com,LOWCOST,2020/01/01 00:01,support@fastfly.com,+551199887766,true
+airline-009,Skylink Aviation,IXX,https://www.skylink.com,STANDARD,2015/09/30 22:10,info@skylink.com,+6037654321,true
+airline-010,Regional Express,JXX,https://www.regionalexpress.com,STANDARD,2012/04/14 19:25,,+74951234567,true
