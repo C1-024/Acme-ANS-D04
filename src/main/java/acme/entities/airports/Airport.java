@@ -12,8 +12,6 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
-import acme.constraints.ValidPhone;
-import acme.datatypes.Phone;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -64,13 +62,13 @@ public class Airport extends AbstractEntity {
 	private String				emailAddress;
 
 	@Optional
-	@ValidPhone
+	//	@ValidPhone
 	@Automapped
-	private Phone				phoneNumber;
+	private String				phoneNumber;
 
-	@Mandatory
-	@Enumerated(EnumType.STRING)
-	@Automapped
-	private Runway				runway;
+	//	@Mandatory
+	//	@Enumerated(EnumType.STRING)
+	//	@Automapped
+	//	private Runway				runway;
 
 }

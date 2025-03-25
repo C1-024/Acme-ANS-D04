@@ -29,24 +29,22 @@ public class ManagerValidator extends AbstractValidator<ValidManager, Manager> {
 	@Override
 	public boolean isValid(final Manager manager, final ConstraintValidatorContext context) {
 
-		//		if (manager == null)
-		//			return false;
-		//		if (context == null)
-		//			return false;
-		//
-		//		boolean validIdentifier = false;
-		//
-		//		if (manager.getUserAccount() == null)
-		//			super.state(context, false, "*", "{validation.manager.code}");
-		//		else {
-		//			String initials = this.getInitials(manager);
-		//			String identifier = manager.getIdentifierNumber();
-		//
-		//			if (identifier != null)
-		//				validIdentifier = identifier.startsWith(initials);
-		//		}
-		//		return validIdentifier;
-		return true;
+		if (context == null)
+			return false;
+
+		boolean validIdentifier = false;
+
+		if (manager.getUserAccount() == null)
+			super.state(context, false, "*", "{validation.manager.code}");
+		else {
+			String initials = this.getInitials(manager);
+			String identifier = manager.getIdentifierNumber();
+
+			if (identifier != null)
+				validIdentifier = identifier.startsWith(initials);
+		}
+		return validIdentifier;
+		//		return true;
 	}
 
 	private String getInitials(final Manager manager) {
