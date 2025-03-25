@@ -1,3 +1,3 @@
 # messages-es.i18n
 
-validation.manager.code = El patrón debe ser "^[A-Z]{2-3}\d{6}$", donde las primeras dos o tres letras corresponden a sus iniciales.
+validation.manager.code=El patrón debe ser ^[A-Z]{2-3}\d{6}$, donde las primeras dos o tres letras corresponden a sus iniciales.
