@@ -18,13 +18,11 @@
 <acme:form> 
 	<acme:input-textbox code="manager.leg.form.label.flightNumber" path="flightNumber"/>
 	<acme:input-moment code="manager.leg.form.label.scheduledArrival" path="scheduledArrival"/>
-	<acme:input-textbox code="manager.leg.form.label.title" path="title"/>
 	<acme:input-moment code="manager.leg.form.label.scheduledArrival" path="scheduledArrival"/>
-	<acme:input-select code="manager.leg.form.label.status" path="status" choices="${status}"/>
 
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="manager.leg.form.button.flights" action="/employer/flight/list?masterId=${id}"/>			
+			<acme:button code="manager.leg.form.button.flights" action="/manager/flight/list?masterId=${id}"/>			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:button code="manager.leg.form.button.flights" action="/manager/flight/list?masterId=${id}"/>

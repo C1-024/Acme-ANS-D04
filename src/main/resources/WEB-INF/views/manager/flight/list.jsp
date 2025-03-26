@@ -19,8 +19,6 @@
 	<acme:list-column code="manager.flight.list.label.tag" path="tag" width="10%"/>
 	<acme:list-column code="manager.flight.list.label.indication" path="indication" width="10%"/>
 	<acme:list-column code="manager.flight.list.label.cost" path="cost" width="10%"/>
-	<acme:list-column code="manager.flight.list.label.description" path="description" width="10%"/>
-	<acme:list-column code="manager.flight.list.label.title" path="title" width="80%"/>
 	<acme:list-payload path="payload"/>
 </acme:list>
 
