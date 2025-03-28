@@ -1,0 +1,10 @@
+# messages-es.i18n
+
+assistance-agent.claim.list.title = Reclamaciones completadas
+
+assistanceAgent.claim.list.label.registrationMoment = Fecha de registro
+assistanceAgent.claim.list.label.passengerEmail = Correo del pasajero
+assistanceAgent.claim.list.label.description = Descripción
+assistanceAgent.claim.list.label.type = Tipo
+assistanceAgent.claim.list.label.indicator = Indicador 
+assistanceAgent.claim.list.label.draftMode = Modo edición

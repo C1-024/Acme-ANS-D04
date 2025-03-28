@@ -24,6 +24,12 @@
 			<acme:menu-suboption code="master.menu.jesmarver.favourite-link" action="https://www.youtube.com/watch?v=R6uREJd8ojU"/>
 			<acme:menu-suboption code="master.menu.enrpermil.favourite-link" action="https://www.spacex.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.assistance-agent" access="hasRealm('AssistanceAgent')">
+			<acme:menu-suboption code="master.menu.assistance-agent.claim.list-completed" action="/assistance-agent/claim/list-mine-completed"/>
+
+		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>

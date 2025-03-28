@@ -1,0 +1,10 @@
+# messages-en.i18n
+
+assistance-agent.claim.list.title = Completed claims
+
+assistanceAgent.claim.list.label.registrationMoment = Registration moment
+assistanceAgent.claim.list.label.passengerEmail = Passenger email
+assistanceAgent.claim.list.label.description = Description
+assistanceAgent.claim.list.label.type = Type
+assistanceAgent.claim.list.label.indicator = Indicator 
+assistanceAgent.claim.list.label.draftMode = Draft mode
