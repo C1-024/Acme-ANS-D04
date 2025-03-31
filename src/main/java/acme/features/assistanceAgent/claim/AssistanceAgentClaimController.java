@@ -16,18 +16,38 @@ public class AssistanceAgentClaimController extends AbstractGuiController<Assist
 	// Internal State --------------------------------------------------------------------
 
 	@Autowired
-	private AssistanceAgentClaimListCompletedService	listCompletedService;
+	private AssistanceAgentClaimListMineCompletedService	listCompletedService;
 
 	@Autowired
-	private AssistanceAgentClaimListUndergoingService	listUndergoingService;
+	private AssistanceAgentClaimListMineUndergoingService	listUndergoingService;
+
+	@Autowired
+	private AssistanceAgentShowService						showService;
+	@Autowired
+	private AssistanceAgentCreateService					createService;
+
+	@Autowired
+	private AssistanceAgentDeleteService					deleteService;
+
+	@Autowired
+	private AssistanceAgentUpdateService					updateService;
+
+	@Autowired
+	private AssistanceAgentPublishService					publishService;
 
 	// Constructors  ----------------------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
+		super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("create", this.createService);
+		super.addBasicCommand("delete", this.deleteService);
+		super.addBasicCommand("update", this.updateService);
+
 		super.addCustomCommand("list-mine-completed", "list", this.listCompletedService);
 		super.addCustomCommand("list-mine-undergoing", "list", this.listUndergoingService);
+		super.addCustomCommand("publish", "update", this.publishService);
 	}
 
 }

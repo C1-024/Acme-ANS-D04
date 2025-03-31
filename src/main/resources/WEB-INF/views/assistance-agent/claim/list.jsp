@@ -25,3 +25,7 @@
 	
 	<acme:list-payload path="payload"/>
 </acme:list>
+
+
+<acme:button code="assistanceAgent.claim.list.button.create" action="/assistance-agent/claim/create"/>
+	

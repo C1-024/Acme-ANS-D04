@@ -1,19 +1,19 @@
 key,registrationMoment,passengerEmail,description,type,indicator,key:assistanceAgent,key:leg,draftMode
-claim-01,2021/05/10 10:00,test@test.com,test description,LUGGAGE_ISSUES,ACCEPTED,assistance-agent-01,leg-001,false
-claim-02,2021/05/10 10:00,test2@test.com,test description 2,FLIGHT_ISSUES,UNDERGOING,assistance-agent-01,leg-002,false
+claim-01,2021/05/10 10:00,test@test.com,test description,LUGGAGE_ISSUES,ACCEPTED,assistance-agent-01,leg-001,true
+claim-02,2021/05/10 10:00,test2@test.com,test description 2,FLIGHT_ISSUES,PENDING,assistance-agent-01,leg-002,true
 claim-03,2021/05/10 10:00,acme@lorem-ipsum.org,test description 3,OTHER_ISSUES,REJECTED,assistance-agent-02,leg-003,true
 claim-04,2022/07/30 0:00,acmepassword@lorem-ipsum.org,test description,OTHER_ISSUES,ACCEPTED,assistance-agent-03,leg-004,true
-claim-05,2022/07/29 23:59,a@b.e,test description,OTHER_ISSUES,ACCEPTED,assistance-agent-04,leg-005,false
-claim-06,2000/01/01 0:00,a@b.es,test description,OTHER_ISSUES,ACCEPTED,assistance-agent-05,leg-006,false
+claim-05,2022/07/29 23:59,a@b.e,test description,OTHER_ISSUES,ACCEPTED,assistance-agent-04,leg-005,true
+claim-06,2000/01/01 0:00,a@b.es,test description,OTHER_ISSUES,ACCEPTED,assistance-agent-05,leg-006,true
 claim-07,2000/01/01 0:01,a@b.esx,test description,OTHER_ISSUES,ACCEPTED,assistance-agent-06,leg-007,true
-claim-08,2021/05/10 10:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,test description,OTHER_ISSUES,UNDERGOING,assistance-agent-07,leg-008,false
-claim-09,2021/05/10 10:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,test description,OTHER_ISSUES,UNDERGOING,assistance-agent-08,leg-009,false
-claim-10,2021/05/10 10:00,test3@test.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",OTHER_ISSUES,UNDERGOING,assistance-agent-09,leg-010,false
-claim-11,2021/05/10 10:00,test3@test.com,L,OTHER_ISSUES,UNDERGOING,assistance-agent-10,leg-011,true
-claim-12,2021/05/10 10:00,test3@test.com,Lo,OTHER_ISSUES,UNDERGOING,assistance-agent-11,leg-012,false
-claim-13,2021/05/10 10:00,test3@test.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",OTHER_ISSUES,UNDERGOING,assistance-agent-12,leg-013,false
-claim-14,2021/05/10 10:00,test3@test.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",OTHER_ISSUES,UNDERGOING,assistance-agent-13,leg-014,false
-claim-15,2021/05/10 10:00,test3@test.com,โลเร็ม อิปซัม,OTHER_ISSUES,UNDERGOING,assistance-agent-14,leg-015,true
+claim-08,2021/05/10 10:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,test description,OTHER_ISSUES,PENDING,assistance-agent-07,leg-008,true
+claim-09,2021/05/10 10:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,test description,OTHER_ISSUES,PENDING,assistance-agent-08,leg-009,true
+claim-10,2021/05/10 10:00,test3@test.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",OTHER_ISSUES,PENDING,assistance-agent-09,leg-010,true
+claim-11,2021/05/10 10:00,test3@test.com,L,OTHER_ISSUES,PENDING,assistance-agent-10,leg-011,true
+claim-12,2021/05/10 10:00,test3@test.com,Lo,OTHER_ISSUES,PENDING,assistance-agent-11,leg-012,true
+claim-13,2021/05/10 10:00,test3@test.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",OTHER_ISSUES,PENDING,assistance-agent-12,leg-013,true
+claim-14,2021/05/10 10:00,test3@test.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",OTHER_ISSUES,PENDING,assistance-agent-13,leg-014,true
+claim-15,2021/05/10 10:00,test3@test.com,โลเร็ม อิปซัม,OTHER_ISSUES,PENDING,assistance-agent-14,leg-015,true
 claim-16,2021/05/10 10:00,test3@test.com,لوريم إيبسوم,OTHER_ISSUES,REJECTED,assistance-agent-15,leg-016,false
 claim-17,2021/05/10 10:00,test3@test.com,洛伦·伊普森,OTHER_ISSUES,REJECTED,assistance-agent-16,leg-017,false
 claim-18,2021/05/10 10:00,test3@test.com,<marquee>Hacked</marquee>,OTHER_ISSUES,REJECTED,assistance-agent-17,leg-018,false
@@ -31,17 +31,17 @@ claim-29,2021/05/10 10:00,test3@test.com,http://www.lorem-ipsum.org/dolor/sit.ht
 claim-30,2021/05/10 10:00,test3@test.com,http://example.org?a=1&b=2,OTHER_ISSUES,ACCEPTED,assistance-agent-29,leg-010,false
 claim-31,2021/05/10 10:00,test3@test.com,http://example.org?,OTHER_ISSUES,ACCEPTED,assistance-agent-30,leg-010,false
 claim-32,2021/05/10 10:00,test3@test.com,http://example.org?a,OTHER_ISSUES,ACCEPTED,assistance-agent-31,leg-010,false
-claim-33,2021/05/10 10:00,test3@test.com,http://example.org?a&b,OTHER_ISSUES,UNDERGOING,assistance-agent-32,leg-010,false
-claim-34,2021/05/10 10:00,test3@test.com,http://example.org/,OTHER_ISSUES,UNDERGOING,assistance-agent-33,leg-010,false
-claim-35,2021/05/10 10:00,test3@test.com,http://example.org/a,OTHER_ISSUES,UNDERGOING,assistance-agent-34,leg-010,false
-claim-36,2021/05/10 10:00,test3@test.com,http://example.org/a/b,OTHER_ISSUES,UNDERGOING,assistance-agent-35,leg-010,false
-claim-37,2021/05/10 10:00,test3@test.com,http://example.org/a/b?,OTHER_ISSUES,UNDERGOING,assistance-agent-36,leg-010,false
-claim-38,2021/05/10 10:00,test3@test.com,http://example.org/a/b?a&b,OTHER_ISSUES,UNDERGOING,assistance-agent-37,leg-010,false
-claim-39,2021/05/10 10:00,test3@test.com,acme@lorem-ipsum.org,OTHER_ISSUES,UNDERGOING,assistance-agent-38,leg-010,false
-claim-40,2021/05/10 10:00,test3@test.com,acme:password@lorem-ipsum.org,OTHER_ISSUES,UNDERGOING,assistance-agent-39,leg-010,false
-claim-41,2021/05/10 10:00,test3@test.com,a@b.e,OTHER_ISSUES,UNDERGOING,assistance-agent-40,leg-010,false
-claim-42,2021/05/10 10:00,test3@test.com,a@b.es,OTHER_ISSUES,UNDERGOING,assistance-agent-41,leg-010,false
+claim-33,2021/05/10 10:00,test3@test.com,http://example.org?a&b,OTHER_ISSUES,PENDING,assistance-agent-32,leg-010,false
+claim-34,2021/05/10 10:00,test3@test.com,http://example.org/,OTHER_ISSUES,PENDING,assistance-agent-33,leg-010,false
+claim-35,2021/05/10 10:00,test3@test.com,http://example.org/a,OTHER_ISSUES,PENDING,assistance-agent-34,leg-010,false
+claim-36,2021/05/10 10:00,test3@test.com,http://example.org/a/b,OTHER_ISSUES,PENDING,assistance-agent-35,leg-010,false
+claim-37,2021/05/10 10:00,test3@test.com,http://example.org/a/b?,OTHER_ISSUES,PENDING,assistance-agent-36,leg-010,false
+claim-38,2021/05/10 10:00,test3@test.com,http://example.org/a/b?a&b,OTHER_ISSUES,PENDING,assistance-agent-37,leg-010,false
+claim-39,2021/05/10 10:00,test3@test.com,acme@lorem-ipsum.org,OTHER_ISSUES,PENDING,assistance-agent-38,leg-010,false
+claim-40,2021/05/10 10:00,test3@test.com,acme:password@lorem-ipsum.org,OTHER_ISSUES,PENDING,assistance-agent-39,leg-010,false
+claim-41,2021/05/10 10:00,test3@test.com,a@b.e,OTHER_ISSUES,PENDING,assistance-agent-40,leg-010,false
+claim-42,2021/05/10 10:00,test3@test.com,a@b.es,OTHER_ISSUES,PENDING,assistance-agent-41,leg-010,false
 claim-43,2021/05/10 10:00,test3@test.com,a@b.esx,OTHER_ISSUES,REJECTED,assistance-agent-42,leg-010,false
 claim-44,2021/05/10 10:00,test3@test.com,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,OTHER_ISSUES,REJECTED,assistance-agent-43,leg-010,false
 claim-45,2021/05/10 10:00,test3@test.com,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,OTHER_ISSUES,REJECTED,assistance-agent-44,leg-010,false
-claim-46,2021/05/10 10:00,test3@test.com,test description,SECURITY_INCIDENT,REJECTED,assistance-agent-45,leg-010,false
+claim-46,2021/05/10 10:00,test3@test.com,test description,SECURITY_INCIDENT,REJECTED,assistance-agent-01,leg-010,false
