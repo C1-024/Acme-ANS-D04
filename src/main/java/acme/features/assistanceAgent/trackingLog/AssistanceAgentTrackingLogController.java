@@ -1,5 +1,5 @@
 
-package acme.features.assistanceAgent.claim;
+package acme.features.assistanceAgent.trackingLog;
 
 import javax.annotation.PostConstruct;
 
@@ -7,47 +7,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.controllers.AbstractGuiController;
 import acme.client.controllers.GuiController;
-import acme.entities.claims.Claim;
+import acme.entities.trackingLogs.TrackingLog;
 import acme.realms.AssistanceAgent;
 
 @GuiController
-public class AssistanceAgentClaimController extends AbstractGuiController<AssistanceAgent, Claim> {
+public class AssistanceAgentTrackingLogController extends AbstractGuiController<AssistanceAgent, TrackingLog> {
 
 	// Internal State --------------------------------------------------------------------
 
 	@Autowired
-	private AssistanceAgentClaimListMineCompletedService	listCompletedService;
+	private AssistanceAgentTrackingLogListService		listService;
 
 	@Autowired
-	private AssistanceAgentClaimListMineUndergoingService	listUndergoingService;
+	private AssistanceAgentTrackingLogShowService		showService;
 
 	@Autowired
-	private AssistanceAgentClaimShowService						showService;
-	@Autowired
-	private AssistanceAgentClaimCreateService					createService;
+	private AssistanceAgentTrackingLogCreateService		createService;
 
 	@Autowired
-	private AssistanceAgentClaimDeleteService					deleteService;
+	private AssistanceAgentTrackingLogDeleteService		deleteService;
 
 	@Autowired
-	private AssistanceAgentClaimUpdateService					updateService;
+	private AssistanceAgentTrackingLogUpdateService		updateService;
 
 	@Autowired
-	private AssistanceAgentClaimPublishService					publishService;
+	private AssistanceAgentTrackingLogPublishService	publishService;
 
 	// Constructors  ----------------------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
+
+		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
 		super.addBasicCommand("create", this.createService);
 		super.addBasicCommand("delete", this.deleteService);
 		super.addBasicCommand("update", this.updateService);
 
-		super.addCustomCommand("list-mine-completed", "list", this.listCompletedService);
-		super.addCustomCommand("list-mine-undergoing", "list", this.listUndergoingService);
 		super.addCustomCommand("publish", "update", this.publishService);
-	}
 
+	}
 }

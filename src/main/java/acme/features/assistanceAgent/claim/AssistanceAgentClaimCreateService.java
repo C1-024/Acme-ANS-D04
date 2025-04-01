@@ -2,22 +2,24 @@
 package acme.features.assistanceAgent.claim;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
+import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
 import acme.entities.claims.ClaimStatus;
 import acme.entities.claims.ClaimType;
 import acme.entities.flights.Leg;
-import acme.entities.trackingLogs.TrackingLog;
 import acme.realms.AssistanceAgent;
 
 @GuiService
-public class AssistanceAgentDeleteService extends AbstractGuiService<AssistanceAgent, Claim> {
+public class AssistanceAgentClaimCreateService extends AbstractGuiService<AssistanceAgent, Claim> {
 
 	// Internal State --------------------------------------------------------------------
 
@@ -30,17 +32,10 @@ public class AssistanceAgentDeleteService extends AbstractGuiService<AssistanceA
 	@Override
 	public void authorise() {
 		boolean status;
-		int assistanceAgentId;
-		int claimId;
-		AssistanceAgent assistanceAgent;
-		Claim selectedClaim;
+		Principal principal;
 
-		assistanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		assistanceAgent = this.repository.findAssistanceAgentById(assistanceAgentId);
-		claimId = super.getRequest().getData("id", int.class);
-		selectedClaim = this.repository.findClaimById(claimId);
-
-		status = super.getRequest().getPrincipal().hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().equals(assistanceAgent);
+		principal = super.getRequest().getPrincipal();
+		status = principal.hasRealmOfType(AssistanceAgent.class);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -48,10 +43,18 @@ public class AssistanceAgentDeleteService extends AbstractGuiService<AssistanceA
 	@Override
 	public void load() {
 		Claim claim;
-		int claimId;
+		AssistanceAgent assistanceAgent;
+		int assistanceAgentId;
+		Date registrationMoment;
 
-		claimId = super.getRequest().getData("id", int.class);
-		claim = this.repository.findClaimById(claimId);
+		assistanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		assistanceAgent = this.repository.findAssistanceAgentById(assistanceAgentId);
+		registrationMoment = MomentHelper.getCurrentMoment();
+
+		claim = new Claim();
+		claim.setAssistanceAgent(assistanceAgent);
+		claim.setDraftMode(true);
+		claim.setRegistrationMoment(registrationMoment);
 
 		super.getBuffer().addData(claim);
 	}
@@ -70,18 +73,15 @@ public class AssistanceAgentDeleteService extends AbstractGuiService<AssistanceA
 
 	@Override
 	public void validate(final Claim claim) {
-		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
-			super.state(claim.isDraftMode(), "draftMode", "assistanceAgent.claim.form.error.draftMode");
+
+		if (claim.getLeg() == null)
+			super.state(claim.getLeg() != null, "leg", "assistanceAgent.claim.form.error.emptyLeg");
+
 	}
 
 	@Override
 	public void perform(final Claim claim) {
-		Collection<TrackingLog> trackingLogs;
-
-		trackingLogs = this.repository.findAllTrackingLogsByClaimId(claim.getId());
-
-		this.repository.deleteAll(trackingLogs);
-		this.repository.delete(claim);
+		this.repository.save(claim);
 	}
 
 	@Override

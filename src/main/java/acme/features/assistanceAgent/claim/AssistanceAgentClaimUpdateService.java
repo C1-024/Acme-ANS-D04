@@ -2,13 +2,12 @@
 package acme.features.assistanceAgent.claim;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
+import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
@@ -18,7 +17,7 @@ import acme.entities.flights.Leg;
 import acme.realms.AssistanceAgent;
 
 @GuiService
-public class AssistanceAgentCreateService extends AbstractGuiService<AssistanceAgent, Claim> {
+public class AssistanceAgentClaimUpdateService extends AbstractGuiService<AssistanceAgent, Claim> {
 
 	// Internal State --------------------------------------------------------------------
 
@@ -31,41 +30,37 @@ public class AssistanceAgentCreateService extends AbstractGuiService<AssistanceA
 	@Override
 	public void authorise() {
 		boolean status;
+		int currentAssistanceAgentId;
+		int claimId;
+		Claim selectedClaim;
+		Principal principal;
 
-		status = super.getRequest().getPrincipal().hasRealmOfType(AssistanceAgent.class);
+		principal = super.getRequest().getPrincipal();
+
+		currentAssistanceAgentId = principal.getActiveRealm().getId();
+		claimId = super.getRequest().getData("id", int.class);
+		selectedClaim = this.repository.findClaimById(claimId);
+
+		status = principal.hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().getId() == currentAssistanceAgentId;
 
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
+		int claimId;
 		Claim claim;
-		AssistanceAgent assistanceAgent;
-		int assistanceAgentId;
-		Date registrationMoment;
 
-		assistanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		assistanceAgent = this.repository.findAssistanceAgentById(assistanceAgentId);
-		registrationMoment = MomentHelper.getCurrentMoment();
+		claimId = super.getRequest().getData("id", int.class);
 
-		claim = new Claim();
-		claim.setAssistanceAgent(assistanceAgent);
-		claim.setDraftMode(true);
-		claim.setRegistrationMoment(registrationMoment);
-
+		claim = this.repository.findClaimById(claimId);
 		super.getBuffer().addData(claim);
 	}
 
 	@Override
 	public void bind(final Claim claim) {
-		int legId;
 
-		Leg leg;
-
-		legId = super.getRequest().getData("leg", int.class);
-		leg = this.repository.findLegById(legId);
-		claim.setLeg(leg);
-		super.bindObject(claim, "passengerEmail", "description", "type", "indicator");
+		super.bindObject(claim, "passengerEmail", "description", "type", "indicator", "leg");
 	}
 
 	@Override
@@ -73,6 +68,9 @@ public class AssistanceAgentCreateService extends AbstractGuiService<AssistanceA
 
 		if (claim.getLeg() == null)
 			super.state(claim.getLeg() != null, "leg", "assistanceAgent.claim.form.error.emptyLeg");
+
+		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
+			super.state(claim.isDraftMode(), "draftMode", "assistanceAgent.claim.form.error.draftMode");
 
 	}
 
