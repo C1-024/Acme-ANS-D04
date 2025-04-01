@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
+import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
@@ -16,7 +17,7 @@ import acme.entities.flights.Leg;
 import acme.realms.AssistanceAgent;
 
 @GuiService
-public class AssistanceAgentUpdateService extends AbstractGuiService<AssistanceAgent, Claim> {
+public class AssistanceAgentClaimPublishService extends AbstractGuiService<AssistanceAgent, Claim> {
 
 	// Internal State --------------------------------------------------------------------
 
@@ -29,17 +30,18 @@ public class AssistanceAgentUpdateService extends AbstractGuiService<AssistanceA
 	@Override
 	public void authorise() {
 		boolean status;
-		int assistanceAgentId;
+		int currentAssistanceAgentId;
 		int claimId;
-		AssistanceAgent assistanceAgent;
 		Claim selectedClaim;
+		Principal principal;
 
-		assistanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		assistanceAgent = this.repository.findAssistanceAgentById(assistanceAgentId);
+		principal = super.getRequest().getPrincipal();
+
+		currentAssistanceAgentId = principal.getActiveRealm().getId();
 		claimId = super.getRequest().getData("id", int.class);
 		selectedClaim = this.repository.findClaimById(claimId);
 
-		status = super.getRequest().getPrincipal().hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().equals(assistanceAgent);
+		status = principal.hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().getId() == currentAssistanceAgentId;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -74,6 +76,9 @@ public class AssistanceAgentUpdateService extends AbstractGuiService<AssistanceA
 
 	@Override
 	public void perform(final Claim claim) {
+
+		claim.setDraftMode(false);
+
 		this.repository.save(claim);
 	}
 
@@ -99,5 +104,4 @@ public class AssistanceAgentUpdateService extends AbstractGuiService<AssistanceA
 
 		super.getResponse().addData(dataset);
 	}
-
 }

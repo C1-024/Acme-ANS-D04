@@ -1,0 +1,25 @@
+# messages-en.i18n
+
+assistance-agent.tracking-log.list.title = Tracking logs
+
+assistanceAgent.trackingLog.list.label.updateMoment = Update moment
+assistanceAgent.trackingLog.list.label.step = Step
+assistanceAgent.trackingLog.list.label.indicator = Indicator
+assistanceAgent.trackingLog.list.label.resolution = Resolution
+assistanceAgent.trackingLog.list.label.resolutionPercentage = Resolucion percentage
+
+assistanceAgent.trackingLog.list.button.create = Create
+
+assistance-agent.tracking-log.form.title = Tracking log
+
+assistanceAgent.trackingLog.form.label.updateMoment = Update moment
+assistanceAgent.trackingLog.form.label.step = Step
+assistanceAgent.trackingLog.form.label.resolutionPercentage = Resolution percentage
+assistanceAgent.trackingLog.form.label.indicator = Indicator
+assistanceAgent.trackingLog.form.label.resolution = Resolution
+
+assistanceAgent.trackingLog.form.button.create = Create
+
+assistanceAgent.trackingLog.form.button.update = Update
+assistanceAgent.trackingLog.form.button.delete = Delete
+assistanceAgent.trackingLog.form.button.publish = Publish

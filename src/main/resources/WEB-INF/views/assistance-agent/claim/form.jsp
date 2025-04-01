@@ -24,7 +24,12 @@
 
 	
 	<jstl:choose>
+			<jstl:when test="${_command == 'show' && draftMode == false}">
+			<acme:button code="assistanceAgent.claim.form.button.tracking-logs" action="/assistance-agent/tracking-log/list?claimId=${id}"/>		
+		</jstl:when>
+		
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:button code="assistanceAgent.claim.form.button.tracking-logs" action="/assistance-agent/tracking-log/list?claimId=${id}"/>	
 			<acme:submit code="assistanceAgent.claim.form.button.update" action="/assistance-agent/claim/update"/>
 			<acme:submit code="assistanceAgent.claim.form.button.delete" action="/assistance-agent/claim/delete"/>
 			<acme:submit code="assistanceAgent.claim.form.button.publish" action="/assistance-agent/claim/publish"/>

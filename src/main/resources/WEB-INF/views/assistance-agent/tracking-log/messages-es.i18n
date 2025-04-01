@@ -1,0 +1,25 @@
+# messages-es.i18n
+
+assistance-agent.tracking-log.list.title = Registros de seguimiento
+
+assistanceAgent.trackingLog.list.label.updateMoment = Fecha de actualización
+assistanceAgent.trackingLog.list.label.step = Paso
+assistanceAgent.trackingLog.list.label.indicator = Indicador
+assistanceAgent.trackingLog.list.label.resolution = Resolución
+assistanceAgent.trackingLog.list.label.resolutionPercentage = Porcentaje de resolución
+
+assistanceAgent.trackingLog.list.button.create = Crear
+
+assistance-agent.tracking-log.form.title = Registro de seguimiento
+
+assistanceAgent.trackingLog.form.label.updateMoment = Fecha de actualización
+assistanceAgent.trackingLog.form.label.step = Paso
+assistanceAgent.trackingLog.form.label.resolutionPercentage = Porcentaje de resolución
+assistanceAgent.trackingLog.form.label.indicator = Indicador
+assistanceAgent.trackingLog.form.label.resolution = Resolución
+
+assistanceAgent.trackingLog.form.button.create = Crear
+
+assistanceAgent.trackingLog.form.button.update = Actualizar
+assistanceAgent.trackingLog.form.button.delete = Eliminar
+assistanceAgent.trackingLog.form.button.publish = Publicar

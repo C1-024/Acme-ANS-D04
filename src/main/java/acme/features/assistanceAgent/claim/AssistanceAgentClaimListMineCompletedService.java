@@ -7,6 +7,7 @@ import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
+import acme.client.components.principals.Principal;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
@@ -26,7 +27,10 @@ public class AssistanceAgentClaimListMineCompletedService extends AbstractGuiSer
 	@Override
 	public void authorise() {
 		boolean status;
-		status = super.getRequest().getPrincipal().hasRealmOfType(AssistanceAgent.class);
+		Principal principal;
+
+		principal = super.getRequest().getPrincipal();
+		status = principal.hasRealmOfType(AssistanceAgent.class);
 
 		super.getResponse().setAuthorised(status);
 	}
