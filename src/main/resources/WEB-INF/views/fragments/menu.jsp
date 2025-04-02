@@ -53,6 +53,11 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.manager" access="hasRealm('Manager')">
+			<acme:menu-suboption code="master.menu.manager.list-my-flights" action="/manager/flight/list" />			
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>		
@@ -62,6 +67,8 @@
 			<acme:menu-suboption code="master.menu.user-account.provider-profile" action="/authenticated/provider/update" access="hasRealm('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRealm('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer-profile" action="/authenticated/consumer/update" access="hasRealm('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRealm('Manager')"/>
+			<acme:menu-suboption code="master.menu.user-account.manager-profile" action="/authenticated/manager/update" access="hasRealm('Manager')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-assistanceAgent" action="/authenticated/assistance-agent/create" access="!hasRealm('AssistanceAgent')"/>
 			<acme:menu-suboption code="master.menu.user-account.assistanceAgent-profile" action="/authenticated/assistance-agent/update" access="hasRealm('AssistanceAgent')"/>
 		</acme:menu-option>
