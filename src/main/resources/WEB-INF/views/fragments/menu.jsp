@@ -40,7 +40,12 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-system-down" action="/administrator/system/shut-down"/>
 		</acme:menu-option>
-
+		
+		<!-- Operaciones de Administrador para claims -->
+		<acme:menu-option code="master.menu.claims" access="hasRealm('Administrator')">
+			<acme:menu-suboption code="master.menu.administrator.list-published-claims" action="/administrator/claim/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.provider" access="hasRealm('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>

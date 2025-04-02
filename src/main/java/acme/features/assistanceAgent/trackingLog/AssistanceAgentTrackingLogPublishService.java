@@ -70,10 +70,10 @@ public class AssistanceAgentTrackingLogPublishService extends AbstractGuiService
 		claim = trackingLog.getClaim();
 
 		if (claim.isDraftMode())
-			super.state(!claim.isDraftMode(), "*", "assistanceAgent.trackingLog.form.error.claimDraftMode");
+			super.state(!claim.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.claimDraftMode");
 
 		if (!trackingLog.isDraftMode())
-			super.state(trackingLog.isDraftMode(), "*", "assistanceAgent.trackingLog.form.error.draftMode");
+			super.state(trackingLog.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.draftMode");
 
 	}
 

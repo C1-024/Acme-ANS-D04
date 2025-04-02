@@ -66,7 +66,7 @@ public class AssistanceAgentTrackingLogUpdateService extends AbstractGuiService<
 	@Override
 	public void validate(final TrackingLog trackingLog) {
 		if (!trackingLog.isDraftMode())
-			super.state(trackingLog.isDraftMode(), "*", "assistanceAgent.trackingLog.form.error.draftMode");
+			super.state(trackingLog.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.draftMode");
 	}
 
 	@Override
