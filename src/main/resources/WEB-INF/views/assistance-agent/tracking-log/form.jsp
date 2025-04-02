@@ -22,7 +22,6 @@
 	<acme:input-select code="assistanceAgent.trackingLog.form.label.indicator" path="indicator" choices="${indicators}"/>
 	<acme:input-textarea code="assistanceAgent.trackingLog.form.label.resolution" path="resolution"/>
 
-	
 	<jstl:choose>		
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">	
 			<acme:submit code="assistanceAgent.trackingLog.form.button.update" action="/assistance-agent/tracking-log/update"/>

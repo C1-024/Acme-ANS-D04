@@ -70,7 +70,7 @@ public class AssistanceAgentClaimUpdateService extends AbstractGuiService<Assist
 			super.state(claim.getLeg() != null, "leg", "assistanceAgent.claim.form.error.emptyLeg");
 
 		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
-			super.state(claim.isDraftMode(), "draftMode", "assistanceAgent.claim.form.error.draftMode");
+			super.state(claim.isDraftMode(), "*", "assistanceAgent.claim.form.error.draftMode");
 
 	}
 

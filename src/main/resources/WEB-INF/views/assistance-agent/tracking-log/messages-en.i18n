@@ -23,3 +23,7 @@ assistanceAgent.trackingLog.form.button.create = Create
 assistanceAgent.trackingLog.form.button.update = Update
 assistanceAgent.trackingLog.form.button.delete = Delete
 assistanceAgent.trackingLog.form.button.publish = Publish
+
+assistanceAgent.trackingLog.form.error.claimDraftMode = The associated claim must be published
+assistanceAgent.trackingLog.form.error.draftMode = You cannot perform this action because the tracking log is published
+assistanceAgent.trackingLog.form.error.allTrackingLogsPublished = You cannot create a tracking log if the others are not published. 

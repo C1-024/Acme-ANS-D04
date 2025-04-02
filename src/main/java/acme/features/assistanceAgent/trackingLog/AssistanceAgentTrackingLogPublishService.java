@@ -11,6 +11,7 @@ import acme.client.components.views.SelectChoices;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
+import acme.entities.claims.Claim;
 import acme.entities.trackingLogs.TrackingLog;
 import acme.entities.trackingLogs.TrackingLogIndicator;
 import acme.realms.AssistanceAgent;
@@ -65,6 +66,14 @@ public class AssistanceAgentTrackingLogPublishService extends AbstractGuiService
 
 	@Override
 	public void validate(final TrackingLog trackingLog) {
+		Claim claim;
+		claim = trackingLog.getClaim();
+
+		if (claim.isDraftMode())
+			super.state(!claim.isDraftMode(), "*", "assistanceAgent.trackingLog.form.error.claimDraftMode");
+
+		if (!trackingLog.isDraftMode())
+			super.state(trackingLog.isDraftMode(), "*", "assistanceAgent.trackingLog.form.error.draftMode");
 
 	}
 

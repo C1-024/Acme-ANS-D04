@@ -23,3 +23,7 @@ assistanceAgent.trackingLog.form.button.create = Crear
 assistanceAgent.trackingLog.form.button.update = Actualizar
 assistanceAgent.trackingLog.form.button.delete = Eliminar
 assistanceAgent.trackingLog.form.button.publish = Publicar
+
+assistanceAgent.claim.form.error.claimDraftMode = La reclamación asociada debe estar publicada
+assistanceAgent.trackingLog.form.error.draftMode = No puedes realizar esta acción porque el registro de seguimiento está publicado
+assistanceAgent.trackingLog.form.error.allTrackingLogsPublished = No puedes crear un registro de seguimiento si no están los demás publicados

@@ -25,4 +25,4 @@ assistanceAgent.claim.form.button.publish = Publish
 assistanceAgent.claim.form.button.tracking-logs = Tracking Logs
 
 assistanceAgent.claim.form.error.emptyLeg = You must select the leg
-assistanceAgent.claim.form.error.draftMode = You cannot perform this action because the claim is published.
+assistanceAgent.claim.form.error.draftMode = You cannot perform this action because the claim is published
