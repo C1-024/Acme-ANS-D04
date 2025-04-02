@@ -1,0 +1,29 @@
+# messages-en.i18n
+
+assistance-agent.tracking-log.list.title = Tracking logs
+
+assistance-agent.tracking-log.list.label.updateMoment = Update moment
+assistance-agent.tracking-log.list.label.step = Step
+assistance-agent.tracking-log.list.label.indicator = Indicator
+assistance-agent.tracking-log.list.label.resolution = Resolution
+assistance-agent.tracking-log.list.label.resolutionPercentage = Resolucion percentage
+
+assistance-agent.tracking-log.list.button.create = Create
+
+assistance-agent.tracking-log.form.title = Tracking log
+
+assistance-agent.tracking-log.form.label.updateMoment = Update moment
+assistance-agent.tracking-log.form.label.step = Step
+assistance-agent.tracking-log.form.label.resolutionPercentage = Resolution percentage
+assistance-agent.tracking-log.form.label.indicator = Indicator
+assistance-agent.tracking-log.form.label.resolution = Resolution
+
+assistance-agent.tracking-log.form.button.create = Create
+
+assistance-agent.tracking-log.form.button.update = Update
+assistance-agent.tracking-log.form.button.delete = Delete
+assistance-agent.tracking-log.form.button.publish = Publish
+
+assistance-agent.tracking-log.form.error.claimDraftMode = The associated claim must be published
+assistance-agent.tracking-log.form.error.draftMode = You cannot perform this action because the tracking log is published
+assistance-agent.tracking-log.form.error.alltracking-logsPublished = You cannot create a tracking log if the others are not published. 

@@ -1,5 +1,5 @@
 
-package acme.entities.tracking_logs;
+package acme.entities.trackingLogs;
 
 import java.util.Date;
 
@@ -27,37 +27,41 @@ public class TrackingLog extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment
-	private Date				updateMoment;
+	private Date					updateMoment;
 
 	@Mandatory
 	@ValidString(max = 50)
 	@Automapped
-	private String				step;
+	private String					step;
 
 	@Mandatory
 	@ValidScore
 	@Automapped
-	private double				resolutionPercentage;
+	private double					resolutionPercentage;
 
 	@Mandatory
 	@Automapped
-	private Boolean				indicator;
+	private TrackingLogIndicator	indicator;
 
 	@Optional
 	@ValidString(max = 255)
 	@Automapped
-	private String				resolution;
+	private String					resolution;
+
+	@Mandatory
+	@Automapped
+	private boolean					draftMode;
 
 	// Relationships -------------------------------------------------------------
 
 	@Valid
 	@ManyToOne(optional = false)
-	private Claim				claim;
+	private Claim					claim;
 }

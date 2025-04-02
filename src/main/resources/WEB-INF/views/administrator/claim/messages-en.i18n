@@ -1,0 +1,22 @@
+# messages-en.i18n
+
+administrator.claim.list.title = Claims
+
+administrator.claim.list.label.registrationMoment = Registration moment
+administrator.claim.list.label.passengerEmail = Passenger email
+administrator.claim.list.label.description = Description
+administrator.claim.list.label.type = Type
+administrator.claim.list.label.indicator = Status 
+administrator.claim.list.label.draftMode = Draft mode
+administrator.claim.list.button.create = Create
+
+administrator.claim.form.title = Claim form
+
+administrator.claim.form.label.registrationMoment = Registration moment
+administrator.claim.form.label.passengerEmail = Passenger email
+administrator.claim.form.label.description = Description
+administrator.claim.form.label.type = Type
+administrator.claim.form.label.indicator = Indicator
+administrator.claim.form.label.leg = Leg
+
+administrator.claim.form.button.tracking-logs = Tracking logs

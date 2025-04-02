@@ -1,0 +1,9 @@
+# messages-es.i18n
+
+administrator.tracking-log.list.title = Registros de seguimiento
+
+administrator.tracking-log.list.label.updateMoment = Fecha de actualización
+administrator.tracking-log.list.label.step = Paso
+administrator.tracking-log.list.label.indicator = Indicador
+administrator.tracking-log.list.label.resolution = Resolución
+administrator.tracking-log.list.label.resolutionPercentage = Porcentaje de resolución
