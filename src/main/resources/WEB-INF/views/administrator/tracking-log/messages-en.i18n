@@ -1,0 +1,9 @@
+# messages-en.i18n
+
+administrator.tracking-log.list.title = Tracking logs
+
+administrator.tracking-log.list.label.updateMoment = Update moment
+administrator.tracking-log.list.label.step = Step
+administrator.tracking-log.list.label.indicator = Indicator
+administrator.tracking-log.list.label.resolution = Resolution
+administrator.tracking-log.list.label.resolutionPercentage = Resolucion percentage

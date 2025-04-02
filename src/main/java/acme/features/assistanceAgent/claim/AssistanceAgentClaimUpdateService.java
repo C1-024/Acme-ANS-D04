@@ -67,10 +67,10 @@ public class AssistanceAgentClaimUpdateService extends AbstractGuiService<Assist
 	public void validate(final Claim claim) {
 
 		if (claim.getLeg() == null)
-			super.state(claim.getLeg() != null, "leg", "assistanceAgent.claim.form.error.emptyLeg");
+			super.state(claim.getLeg() != null, "leg", "assistance-agent.claim.form.error.emptyLeg");
 
 		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
-			super.state(claim.isDraftMode(), "*", "assistanceAgent.claim.form.error.draftMode");
+			super.state(claim.isDraftMode(), "*", "assistance-agent.claim.form.error.draftMode");
 
 	}
 

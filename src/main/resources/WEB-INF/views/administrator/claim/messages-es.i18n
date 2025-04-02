@@ -1,0 +1,22 @@
+# messages-es.i18n
+
+administrator.claim.list.title = Reclamaciones
+
+administrator.claim.list.label.registrationMoment = Fecha de registro
+administrator.claim.list.label.passengerEmail = Correo del pasajero
+administrator.claim.list.label.description = Descripción
+administrator.claim.list.label.type = Tipo
+administrator.claim.list.label.indicator = Estado 
+administrator.claim.list.label.draftMode = Modo edición
+administrator.claim.list.button.create = Crear
+
+administrator.claim.form.title = Detalles de la reclamación
+
+administrator.claim.form.label.registrationMoment = Fecha de registro
+administrator.claim.form.label.passengerEmail = Correo del pasajero
+administrator.claim.form.label.description = Descripción
+administrator.claim.form.label.type = Tipo
+administrator.claim.form.label.indicator = Indicador
+administrator.claim.form.label.leg = Tramo
+
+administrator.claim.form.button.tracking-logs = Registros de seguimiento

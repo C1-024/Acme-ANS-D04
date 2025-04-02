@@ -74,7 +74,7 @@ public class AssistanceAgentClaimDeleteService extends AbstractGuiService<Assist
 	@Override
 	public void validate(final Claim claim) {
 		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
-			super.state(claim.isDraftMode(), "*", "assistanceAgent.claim.form.error.draftMode");
+			super.state(claim.isDraftMode(), "*", "assistance-agent.claim.form.error.draftMode");
 	}
 
 	@Override

@@ -75,7 +75,7 @@ public class AssistanceAgentClaimCreateService extends AbstractGuiService<Assist
 	public void validate(final Claim claim) {
 
 		if (claim.getLeg() == null)
-			super.state(claim.getLeg() != null, "leg", "assistanceAgent.claim.form.error.emptyLeg");
+			super.state(claim.getLeg() != null, "leg", "assistance-agent.claim.form.error.emptyLeg");
 
 	}
 

@@ -89,7 +89,7 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 				allTrackingLogsPublished = false;
 
 		if (!allTrackingLogsPublished)
-			super.state(allTrackingLogsPublished, "*", "assistanceAgent.trackingLog.form.error.allTrackingLogsPublished");
+			super.state(allTrackingLogsPublished, "*", "assistance-agent.tracking-log.form.error.allTrackingLogsPublished");
 
 	}
 

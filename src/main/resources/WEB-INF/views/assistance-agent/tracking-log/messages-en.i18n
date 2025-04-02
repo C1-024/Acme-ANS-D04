@@ -2,28 +2,28 @@
 
 assistance-agent.tracking-log.list.title = Tracking logs
 
-assistanceAgent.trackingLog.list.label.updateMoment = Update moment
-assistanceAgent.trackingLog.list.label.step = Step
-assistanceAgent.trackingLog.list.label.indicator = Indicator
-assistanceAgent.trackingLog.list.label.resolution = Resolution
-assistanceAgent.trackingLog.list.label.resolutionPercentage = Resolucion percentage
+assistance-agent.tracking-log.list.label.updateMoment = Update moment
+assistance-agent.tracking-log.list.label.step = Step
+assistance-agent.tracking-log.list.label.indicator = Indicator
+assistance-agent.tracking-log.list.label.resolution = Resolution
+assistance-agent.tracking-log.list.label.resolutionPercentage = Resolucion percentage
 
-assistanceAgent.trackingLog.list.button.create = Create
+assistance-agent.tracking-log.list.button.create = Create
 
 assistance-agent.tracking-log.form.title = Tracking log
 
-assistanceAgent.trackingLog.form.label.updateMoment = Update moment
-assistanceAgent.trackingLog.form.label.step = Step
-assistanceAgent.trackingLog.form.label.resolutionPercentage = Resolution percentage
-assistanceAgent.trackingLog.form.label.indicator = Indicator
-assistanceAgent.trackingLog.form.label.resolution = Resolution
+assistance-agent.tracking-log.form.label.updateMoment = Update moment
+assistance-agent.tracking-log.form.label.step = Step
+assistance-agent.tracking-log.form.label.resolutionPercentage = Resolution percentage
+assistance-agent.tracking-log.form.label.indicator = Indicator
+assistance-agent.tracking-log.form.label.resolution = Resolution
 
-assistanceAgent.trackingLog.form.button.create = Create
+assistance-agent.tracking-log.form.button.create = Create
 
-assistanceAgent.trackingLog.form.button.update = Update
-assistanceAgent.trackingLog.form.button.delete = Delete
-assistanceAgent.trackingLog.form.button.publish = Publish
+assistance-agent.tracking-log.form.button.update = Update
+assistance-agent.tracking-log.form.button.delete = Delete
+assistance-agent.tracking-log.form.button.publish = Publish
 
-assistanceAgent.trackingLog.form.error.claimDraftMode = The associated claim must be published
-assistanceAgent.trackingLog.form.error.draftMode = You cannot perform this action because the tracking log is published
-assistanceAgent.trackingLog.form.error.allTrackingLogsPublished = You cannot create a tracking log if the others are not published. 
+assistance-agent.tracking-log.form.error.claimDraftMode = The associated claim must be published
+assistance-agent.tracking-log.form.error.draftMode = You cannot perform this action because the tracking log is published
+assistance-agent.tracking-log.form.error.alltracking-logsPublished = You cannot create a tracking log if the others are not published. 
