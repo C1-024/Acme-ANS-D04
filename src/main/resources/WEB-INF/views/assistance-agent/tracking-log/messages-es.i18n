@@ -26,4 +26,4 @@ assistance-agent.tracking-log.form.button.publish = Publicar
 
 assistance-agent.tracking-log.form.error.claimDraftMode = La reclamación asociada debe estar publicada
 assistance-agent.tracking-log.form.error.draftMode = No puedes realizar esta acción porque el registro de seguimiento está publicado
-assistance-agent.tracking-log.form.error.alltracking-logsPublished = No puedes crear un registro de seguimiento si no están los demás publicados
+assistance-agent.tracking-log.form.error.allTrackingLogsPublished = No puedes crear un registro de seguimiento si no están los demás publicados

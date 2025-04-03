@@ -59,3 +59,4 @@ master.menu.assistance-agent = Assistance agent
 master.menu.assistance-agent.claim.list-mine-undergoing = My undergoing claims
 master.menu.user-account.become-assistanceAgent = Become a assistance agent
 master.menu.user-account.assistanceAgent-profile = Assistance agent profile
+master.menu.assistance-agent.claim.assistance-agent-dashboard = Dashboard

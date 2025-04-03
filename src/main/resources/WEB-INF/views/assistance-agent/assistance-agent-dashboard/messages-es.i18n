@@ -1,0 +1,6 @@
+# messages-es.i18n
+
+assistance-agent.assistance-agent-dashboard.form.title = Panel de indicadores para agentes de asistencia
+
+assistance-agent.assistance-agent-dashboard.form.label.resolvedClaimsRatio = Tasa de reclamaciones resueltas con éxito
+assistance-agent.assistance-agent-dashboard.form.label.rejectedClaimsRatio = Tasa de reclamaciones rechazadas

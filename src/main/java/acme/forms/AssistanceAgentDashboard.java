@@ -1,8 +1,7 @@
 
 package acme.forms;
 
-import java.util.Collection;
-import java.util.Date;
+import java.util.List;
 
 import acme.client.components.basis.AbstractForm;
 import acme.client.components.validation.ValidScore;
@@ -20,21 +19,21 @@ public class AssistanceAgentDashboard extends AbstractForm {
 	// Attributes -------------------------------------------------------------
 
 	@ValidScore
-	private double				resolvedClaimsRatio;
+	private Double				resolvedClaimsRatio;
 
 	@ValidScore
-	private double				rejectedClaimsRatio;
+	private Double				rejectedClaimsRatio;
 
-	private Collection<Date>	topThreeMonthsClaims;
+	private List<String>		topThreeMonthsClaims;
 
-	private double				avgTotalClaims;
-	private int					minTotalClaims;
-	private int					maxTotalClaims;
-	private double				stdevTotalClaims;
+	private Double				avgTotalClaims;
+	private Integer				minTotalClaims;
+	private Integer				maxTotalClaims;
+	private Double				stdevTotalClaims;
 
-	private double				avgLastMonthAssistedClaims;
-	private int					minLastMonthAssistedClaims;
-	private int					maxLastMonthAssistedClaims;
-	private double				stdevLastMonthAssistedClaims;
+	private Double				avgLastMonthAssistedClaims;
+	private Integer				minLastMonthAssistedClaims;
+	private Integer				maxLastMonthAssistedClaims;
+	private Double				stdevLastMonthAssistedClaims;
 
 }

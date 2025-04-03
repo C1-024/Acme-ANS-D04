@@ -1,0 +1,7 @@
+# messages-en.i18n
+
+assistance-agent.assistance-agent-dashboard.form.title = Assistance agent dashboard
+
+assistance-agent.assistance-agent-dashboard.form.label.resolvedClaimsRatio = Resolved successfully claims ratio
+assistance-agent.assistance-agent-dashboard.form.label.rejectedClaimsRatio = Rejected claims ratio
+
