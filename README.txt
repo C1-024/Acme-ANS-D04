@@ -14,7 +14,7 @@ The goal of this project is to develop a WIS to assist airports in managing logi
 This includes flight scheduling, booking management, crew management, incident reporting and resolution, 
 as well as aircraft maintenance.  
 
-Link to our planning dashboard in GitHub: https://github.com/users/davvarmunUS/projects/3
+Link to our planning dashboard in GitHub: https://github.com/orgs/C1-024/projects/1/views/1
 
 To get this project up and running, please follow the guideline in the theory/lab materials,
 taking into account that you must link the appropriate version of the Acme-Framework excluding 
