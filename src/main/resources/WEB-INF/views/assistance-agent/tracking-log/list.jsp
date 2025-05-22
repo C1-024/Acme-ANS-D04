@@ -19,7 +19,7 @@
 	<acme:list-column code="assistance-agent.tracking-log.list.label.updateMoment" path="updateMoment" width="20%"/>
 	<acme:list-column code="assistance-agent.tracking-log.list.label.resolution" path="resolution" width="20%"/>
 	<acme:list-column code="assistance-agent.tracking-log.list.label.step" path="step" width="20%"/>
-	<acme:list-column code="assistance-agent.tracking-log.list.label.indicator" path="indicator" width="20%"/>
+	<acme:list-column code="assistance-agent.tracking-log.list.label.indicator" path="status" width="20%"/>
 	<acme:list-column code="assistance-agent.tracking-log.list.label.resolutionPercentage" path="resolutionPercentage" width="20%"/>
 
 </acme:list>

@@ -16,6 +16,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
+import acme.constraints.ValidTrackingLog;
 import acme.entities.claims.Claim;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,45 +24,51 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidTrackingLog
 public class TrackingLog extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
-	private static final long		serialVersionUID	= 1L;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@Temporal(TemporalType.TIMESTAMP)
-	@ValidMoment
-	private Date					updateMoment;
+	@ValidMoment(past = true)
+	private Date				updateMoment;
 
 	@Mandatory
 	@ValidString(max = 50)
 	@Automapped
-	private String					step;
+	private String				step;
 
 	@Mandatory
 	@ValidScore
 	@Automapped
-	private double					resolutionPercentage;
+	private double				resolutionPercentage;
 
 	@Mandatory
 	@Automapped
-	private TrackingLogIndicator	indicator;
+	private TrackingLogStatus	status;
 
 	@Optional
 	@ValidString(max = 255)
 	@Automapped
-	private String					resolution;
+	private String				resolution;
 
 	@Mandatory
 	@Automapped
-	private boolean					draftMode;
+	private boolean				draftMode;
+
+	@Mandatory
+	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				creationMoment;
 
 	// Relationships -------------------------------------------------------------
 
 	@Valid
 	@ManyToOne(optional = false)
-	private Claim					claim;
+	private Claim				claim;
 }

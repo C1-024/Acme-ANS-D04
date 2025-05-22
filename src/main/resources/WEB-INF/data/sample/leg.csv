@@ -18,3 +18,4 @@ leg-016,HH8889,2025/01/01 00:00,2025/01/01 02:00,ONTIME,true,flight-016,airport-
 leg-017,II9990,2025/07/04 08:00,2025/07/04 12:00,DELAYED,true,flight-017,airport-01,airport-02
 leg-018,JJ0002,2025/11/01 00:00,2025/11/01 06:00,LANDED,true,flight-018,airport-01,airport-02
 leg-019,KK1113,2025/04/01 00:01,2025/04/01 04:00,CANCELLED,true,flight-019,airport-01,airport-02
+leg-020,KK1111,2020/04/01 00:01,2020/04/01 04:00,LANDED,false,flight-020,airport-01,airport-02

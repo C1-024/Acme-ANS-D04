@@ -1,0 +1,22 @@
+# validation-es.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+acme.validation.trackingLog.resolution.required = La resolución es obligatoria en Registros de Seguimiento completados
+acme.validation.trackinLog.validResolution.required = La resolución es obligatoria en Registros de Seguimiento con un porcentaje de resolución de 100%
+acme.validation.trackingLog.draftMode.checkTrackingLog = La reclamación debe estar publicada antes de publicar un registro de seguimiento
+acme.validation.trackingLog.status.checkCompleted = El porcentaje de resolución debe ser 100% en registros de seguimiento completados
+acme.validation.trackingLog.status.checkPending = El porcentaje de resolución debe ser menor de 100% en registros de seguimiento pendientes
+
+acme.validation.claim.leg.draftAndmoment = El tramo asociado a la reclamación debe ser en el pasado y estar publicada
+
+acme.validation.assistanceAgent.employeeCode.initials = Las dos primeras letras del código de empleado deben ser las iniciales de su nombre
+
+acme.validation.NotNull.message = La entidad no puede ser nula
+

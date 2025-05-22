@@ -14,8 +14,8 @@ import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
 import acme.entities.trackingLogs.TrackingLog;
-import acme.entities.trackingLogs.TrackingLogIndicator;
-import acme.realms.AssistanceAgent;
+import acme.entities.trackingLogs.TrackingLogStatus;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<AssistanceAgent, TrackingLog> {
@@ -63,6 +63,7 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 		trackingLog = new TrackingLog();
 		trackingLog.setClaim(claim);
 		trackingLog.setUpdateMoment(currentMoment);
+		trackingLog.setCreationMoment(currentMoment);
 		trackingLog.setDraftMode(true);
 
 		super.getBuffer().addData(trackingLog);
@@ -71,7 +72,7 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 
 	@Override
 	public void bind(final TrackingLog trackingLog) {
-		super.bindObject(trackingLog, "step", "resolutionPercentage", "indicator", "resolution");
+		super.bindObject(trackingLog, "step", "resolutionPercentage", "status", "resolution");
 	}
 
 	@Override
@@ -101,11 +102,11 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 	@Override
 	public void unbind(final TrackingLog trackingLog) {
 		Dataset dataset;
-		SelectChoices indicators;
+		SelectChoices states;
 
-		dataset = super.unbindObject(trackingLog, "updateMoment", "step", "resolutionPercentage", "indicator", "resolution");
-		indicators = SelectChoices.from(TrackingLogIndicator.class, trackingLog.getIndicator());
-		dataset.put("indicators", indicators);
+		dataset = super.unbindObject(trackingLog, "updateMoment", "step", "resolutionPercentage", "status", "resolution");
+		states = SelectChoices.from(TrackingLogStatus.class, trackingLog.getStatus());
+		dataset.put("states", states);
 		dataset.put("claimId", trackingLog.getClaim().getId());
 
 		super.getResponse().addData(dataset);

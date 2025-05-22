@@ -14,7 +14,7 @@ import acme.entities.claims.Claim;
 import acme.entities.claims.ClaimStatus;
 import acme.entities.claims.ClaimType;
 import acme.entities.flights.Leg;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AssistanceAgentClaimUpdateService extends AbstractGuiService<AssistanceAgent, Claim> {
@@ -87,10 +87,10 @@ public class AssistanceAgentClaimUpdateService extends AbstractGuiService<Assist
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findAllLegsNotPublished();
+		legs = this.repository.findAllLegsPublished();
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
-		indicators = SelectChoices.from(ClaimStatus.class, claim.getIndicator());
+		indicators = SelectChoices.from(ClaimStatus.class, claim.getStatus());
 		legsChoices = SelectChoices.from(legs, "flightNumber", claim.getLeg());
 
 		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "indicator");
