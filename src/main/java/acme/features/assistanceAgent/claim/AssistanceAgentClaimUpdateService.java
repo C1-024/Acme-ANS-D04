@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.models.Dataset;
 import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
@@ -85,7 +86,7 @@ public class AssistanceAgentClaimUpdateService extends AbstractGuiService<Assist
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findAllLegsPublished();
+		legs = this.repository.findAllLegsPublishedAndFinalized(MomentHelper.getCurrentMoment());
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
 		legsChoices = SelectChoices.from(legs, "flightNumber", claim.getLeg());

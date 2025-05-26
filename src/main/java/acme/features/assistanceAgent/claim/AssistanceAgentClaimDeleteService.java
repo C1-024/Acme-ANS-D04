@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.models.Dataset;
 import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
@@ -72,7 +73,7 @@ public class AssistanceAgentClaimDeleteService extends AbstractGuiService<Assist
 
 	@Override
 	public void validate(final Claim claim) {
-		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
+		if (!claim.isDraftMode())
 			super.state(claim.isDraftMode(), "*", "assistance-agent.claim.form.error.draftMode");
 	}
 
@@ -93,7 +94,7 @@ public class AssistanceAgentClaimDeleteService extends AbstractGuiService<Assist
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findAllLegsPublished();
+		legs = this.repository.findAllLegsPublishedAndFinalized(MomentHelper.getCurrentMoment());
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
 		legsChoices = SelectChoices.from(legs, "flightNumber", claim.getLeg());

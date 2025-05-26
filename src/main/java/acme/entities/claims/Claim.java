@@ -49,7 +49,7 @@ public class Claim extends AbstractEntity {
 	private String				passengerEmail;
 
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidString(max = 255, min = 1)
 	@Automapped
 	private String				description;
 
