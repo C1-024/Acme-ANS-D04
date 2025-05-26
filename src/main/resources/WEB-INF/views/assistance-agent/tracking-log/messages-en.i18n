@@ -26,4 +26,4 @@ assistance-agent.tracking-log.form.button.publish = Publish
 
 assistance-agent.tracking-log.form.error.claimDraftMode = The associated claim must be published
 assistance-agent.tracking-log.form.error.draftMode = You cannot perform this action because the tracking log is published
-assistance-agent.tracking-log.form.error.allTrackingLogsPublished = You cannot create a tracking log if the others are not published. 
+assistance-agent.tracking-log.form.error.allTrackingLogsPublished = You cannot create a tracking log if the others are not published

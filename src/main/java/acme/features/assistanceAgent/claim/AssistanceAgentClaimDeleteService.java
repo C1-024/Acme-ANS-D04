@@ -11,11 +11,10 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
-import acme.entities.claims.ClaimStatus;
 import acme.entities.claims.ClaimType;
 import acme.entities.flights.Leg;
 import acme.entities.trackingLogs.TrackingLog;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AssistanceAgentClaimDeleteService extends AbstractGuiService<AssistanceAgent, Claim> {
@@ -68,7 +67,7 @@ public class AssistanceAgentClaimDeleteService extends AbstractGuiService<Assist
 		legId = super.getRequest().getData("leg", int.class);
 		leg = this.repository.findLegById(legId);
 		claim.setLeg(leg);
-		super.bindObject(claim, "passengerEmail", "description", "type", "indicator");
+		super.bindObject(claim, "passengerEmail", "description", "type");
 	}
 
 	@Override
@@ -91,19 +90,16 @@ public class AssistanceAgentClaimDeleteService extends AbstractGuiService<Assist
 	public void unbind(final Claim claim) {
 		Dataset dataset;
 		SelectChoices types;
-		SelectChoices indicators;
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findAllLegsNotPublished();
+		legs = this.repository.findAllLegsPublished();
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
-		indicators = SelectChoices.from(ClaimStatus.class, claim.getIndicator());
 		legsChoices = SelectChoices.from(legs, "flightNumber", claim.getLeg());
 
-		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "indicator");
+		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "draftMode");
 		dataset.put("types", types);
-		dataset.put("indicators", indicators);
 		dataset.put("legs", legsChoices);
 		dataset.put("leg", legsChoices.getSelected().getKey());
 

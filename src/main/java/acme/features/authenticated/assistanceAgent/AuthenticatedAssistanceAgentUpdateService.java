@@ -13,7 +13,7 @@ import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.airports.Airline;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AuthenticatedAssistanceAgentUpdateService extends AbstractGuiService<Authenticated, AssistanceAgent> {

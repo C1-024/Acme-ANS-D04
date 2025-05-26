@@ -11,10 +11,9 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
-import acme.entities.claims.ClaimStatus;
 import acme.entities.claims.ClaimType;
 import acme.entities.flights.Leg;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AssistanceAgentClaimShowService extends AbstractGuiService<AssistanceAgent, Claim> {
@@ -61,19 +60,16 @@ public class AssistanceAgentClaimShowService extends AbstractGuiService<Assistan
 	public void unbind(final Claim claim) {
 		Dataset dataset;
 		SelectChoices types;
-		SelectChoices indicators;
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findAllLegsNotPublished();
+		legs = this.repository.findAllLegsPublished();
 
-		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "indicator", "draftMode");
+		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "draftMode");
 		types = SelectChoices.from(ClaimType.class, claim.getType());
-		indicators = SelectChoices.from(ClaimStatus.class, claim.getIndicator());
 		legsChoices = SelectChoices.from(legs, "flightNumber", claim.getLeg());
 
 		dataset.put("types", types);
-		dataset.put("indicators", indicators);
 		dataset.put("legFlightNumber", claim.getLeg().getFlightNumber());
 		dataset.put("legs", legsChoices);
 		dataset.put("leg", legsChoices.getSelected().getKey());

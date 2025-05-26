@@ -10,16 +10,16 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.claims.Claim;
 import acme.entities.flights.Leg;
 import acme.entities.trackingLogs.TrackingLog;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @Repository
 public interface AssistanceAgentClaimRepository extends AbstractRepository {
 
-	@Query("select c from Claim c where (c.indicator = 0 or c.indicator = 2) and c.assistanceAgent.id = :assistanceAgentId")
-	Collection<Claim> findCompletedClaimsByAssistanceAgentId(int assistanceAgentId);
-
-	@Query("select c from Claim c where c.indicator = 1 and c.assistanceAgent.id = :assistanceAgentId")
-	Collection<Claim> findUndergoingClaimsByAssistanceAgentId(int assistanceAgentId);
+	//	@Query("select c from Claim c where (c.indicator = 0 or c.indicator = 2) and c.assistanceAgent.id = :assistanceAgentId")
+	//	Collection<Claim> findCompletedClaimsByAssistanceAgentId(int assistanceAgentId);
+	//
+	//	@Query("select c from Claim c where c.indicator = 1 and c.assistanceAgent.id = :assistanceAgentId")
+	//	Collection<Claim> findUndergoingClaimsByAssistanceAgentId(int assistanceAgentId);
 
 	@Query("select c from Claim c where c.id = :id")
 	Claim findClaimById(int id);
@@ -30,8 +30,8 @@ public interface AssistanceAgentClaimRepository extends AbstractRepository {
 	@Query("select a from AssistanceAgent a where a.id = :assistanceAgentId")
 	AssistanceAgent findAssistanceAgentById(int assistanceAgentId);
 
-	@Query("select l from Leg l where l.draftMode = true")
-	Collection<Leg> findAllLegsNotPublished();
+	@Query("select l from Leg l where l.draftMode = false")
+	Collection<Leg> findAllLegsPublished();
 
 	@Query("select l from Leg l where l.id = :legId")
 	Leg findLegById(int legId);

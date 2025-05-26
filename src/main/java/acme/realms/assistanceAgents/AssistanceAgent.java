@@ -1,9 +1,8 @@
 
-package acme.realms;
+package acme.realms.assistanceAgents;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -19,6 +18,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidAssistanceAgent;
 import acme.entities.airports.Airline;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +26,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidAssistanceAgent
 public class AssistanceAgent extends AbstractRole {
 
 	// Serialisation version --------------------------------------------------
@@ -34,7 +35,7 @@ public class AssistanceAgent extends AbstractRole {
 
 	// Attributes -------------------------------------------------------------
 
-	@Column(unique = true)
+	//	@Column(unique = true)
 	@Mandatory
 	@ValidString(pattern = "^[A-Z]{2,3}\\d{6}$")
 	@Automapped

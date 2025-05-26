@@ -11,7 +11,8 @@ import acme.client.components.principals.Principal;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.claims.Claim;
-import acme.realms.AssistanceAgent;
+import acme.entities.claims.ClaimStatus;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AssistanceAgentClaimListMineUndergoingService extends AbstractGuiService<AssistanceAgent, Claim> {
@@ -41,7 +42,9 @@ public class AssistanceAgentClaimListMineUndergoingService extends AbstractGuiSe
 		int assitanceAgentId;
 
 		assitanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		claims = this.repository.findUndergoingClaimsByAssistanceAgentId(assitanceAgentId);
+		claims = this.repository.findAllClaimsByAssistanceAgentId(assitanceAgentId);
+
+		claims = claims.stream().filter(t -> t.getStatus() == ClaimStatus.PENDING).toList();
 
 		super.getBuffer().addData(claims);
 	}
@@ -50,8 +53,8 @@ public class AssistanceAgentClaimListMineUndergoingService extends AbstractGuiSe
 	public void unbind(final Claim claim) {
 		Dataset dataset;
 
-		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "indicator");
-
+		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type");
+		dataset.put("status", claim.getStatus());
 		if (claim.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 

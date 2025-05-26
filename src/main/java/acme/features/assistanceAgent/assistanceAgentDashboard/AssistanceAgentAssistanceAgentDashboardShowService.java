@@ -8,7 +8,7 @@ import acme.client.components.principals.Principal;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.forms.AssistanceAgentDashboard;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @GuiService
 public class AssistanceAgentAssistanceAgentDashboardShowService extends AbstractGuiService<AssistanceAgent, AssistanceAgentDashboard> {
@@ -42,12 +42,12 @@ public class AssistanceAgentAssistanceAgentDashboardShowService extends Abstract
 
 		assistanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		resolvedClaimsRatio = this.repository.ratioAcceptedClaimsByAssistanceAgentId(assistanceAgentId);
-		rejectedClaimsRatio = this.repository.ratioRejectedClaimsByAssistanceAgentId(assistanceAgentId);
+		//		resolvedClaimsRatio = this.repository.ratioAcceptedClaimsByAssistanceAgentId(assistanceAgentId);
+		//		rejectedClaimsRatio = this.repository.ratioRejectedClaimsByAssistanceAgentId(assistanceAgentId);
 
 		assistanceAgentDashboard = new AssistanceAgentDashboard();
-		assistanceAgentDashboard.setResolvedClaimsRatio(resolvedClaimsRatio);
-		assistanceAgentDashboard.setRejectedClaimsRatio(rejectedClaimsRatio);
+		//		assistanceAgentDashboard.setResolvedClaimsRatio(resolvedClaimsRatio);
+		//		assistanceAgentDashboard.setRejectedClaimsRatio(rejectedClaimsRatio);
 
 		super.getBuffer().addData(assistanceAgentDashboard);
 	}

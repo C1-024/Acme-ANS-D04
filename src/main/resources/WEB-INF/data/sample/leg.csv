@@ -12,9 +12,10 @@ leg-010,BB2223,2023/03/31 23:59,2023/04/01 03:59,DELAYED,true,flight-010,airport
 leg-011,CC3334,2022/12/31 23:59,2023/01/01 03:59,CANCELLED,true,flight-011,airport-01,airport-02
 leg-012,DD4445,2025/06/30 23:59,2025/07/01 04:00,ONTIME,true,flight-012,airport-01,airport-02
 leg-013,EE5556,2025/08/31 23:59,2025/09/01 04:00,DELAYED,true,flight-013,airport-01,airport-02
-leg-014,FF6667,2025/10/25 03:00,2025/10/25 05:00,LANDED,true,flight-014,airport-01,airport-02
+leg-014,FF6667,2020/04/01 00:01,2025/10/25 05:00,LANDED,false,flight-014,airport-01,airport-02
 leg-015,GG7778,2025/12/24 23:59,2025/12/25 07:00,CANCELLED,true,flight-015,airport-01,airport-02
 leg-016,HH8889,2025/01/01 00:00,2025/01/01 02:00,ONTIME,true,flight-016,airport-01,airport-02
 leg-017,II9990,2025/07/04 08:00,2025/07/04 12:00,DELAYED,true,flight-017,airport-01,airport-02
-leg-018,JJ0002,2025/11/01 00:00,2025/11/01 06:00,LANDED,true,flight-018,airport-01,airport-02
+leg-018,JJ0002,2020/04/01 00:01,2025/11/01 06:00,LANDED,false,flight-018,airport-01,airport-02
 leg-019,KK1113,2025/04/01 00:01,2025/04/01 04:00,CANCELLED,true,flight-019,airport-01,airport-02
+leg-020,KK1111,2020/04/01 00:01,2020/04/01 04:00,LANDED,false,flight-020,airport-01,airport-02

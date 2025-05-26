@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import acme.client.components.principals.UserAccount;
 import acme.client.repositories.AbstractRepository;
 import acme.entities.airports.Airline;
-import acme.realms.AssistanceAgent;
+import acme.realms.assistanceAgents.AssistanceAgent;
 
 @Repository
 public interface AuthenticatedAssistanceAgentRepository extends AbstractRepository {
