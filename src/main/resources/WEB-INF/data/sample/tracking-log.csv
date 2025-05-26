@@ -1,6 +1,6 @@
 key,updateMoment,step,resolutionPercentage,status,resolution,key:claim,draftMode,creationMoment
 tracking-log-01,2022/07/30 00:00,Test,100,ACCEPTED,Test resolution,claim-01,true,2022/07/30 00:00
-tracking-log-02,2022/07/29 23:59,Test step,80,PENDING,Test test test,claim-02,false,2022/07/29 23:59
+tracking-log-02,2022/07/29 23:59,Test step,100,ACCEPTED,Test test test,claim-02,false,2022/07/29 23:59
 tracking-log-03,2000/01/01 0:00,Test step,100,ACCEPTED,Test resolution,claim-02,false,2000/01/01 0:00
 tracking-log-04,2000/01/01 0:01,Test step,100,ACCEPTED,Test resolution,claim-03,true,2000/01/01 0:01
 tracking-log-05,2022/07/10 10:00,Test step,100,ACCEPTED,Test resolution,claim-04,true,2022/07/10 10:00
@@ -46,35 +46,35 @@ tracking-log-44,2022/07/10 10:00,Test step,100,REJECTED,"Lorem ipsum dolor sit a
 tracking-log-45,2022/07/10 10:00,Test step,100,REJECTED,L,claim-44,true,2022/07/10 10:00
 tracking-log-46,2022/07/10 10:00,Test step,100,REJECTED,Lo,claim-45,true,2022/07/10 10:00
 tracking-log-47,2022/07/10 10:00,Test step,100,REJECTED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",claim-46,true,2022/07/10 10:00
-tracking-log-48,2022/07/10 10:00,Test step,1,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",claim-10,true,2022/07/10 10:00
-tracking-log-49,2022/07/10 10:00,Test step,2,PENDING,โลเร็ม อิปซัม,claim-10,true,2022/07/10 10:10
-tracking-log-50,2022/07/10 10:00,Test step,3,PENDING,لوريم إيبسوم,claim-10,true,2022/07/10 10:05
-tracking-log-51,2022/07/10 10:00,Test step,4,PENDING,洛伦·伊普森,claim-10,true,2022/07/10 11:00
-tracking-log-52,2022/07/10 10:00,Test step,5,PENDING,<marquee>Hacked</marquee>,claim-10,true,2022/07/10 10:00
-tracking-log-53,2022/07/10 10:00,Test step,6,PENDING,<script>alert(‘Hacked!’);</script>,claim-10,true,2022/07/10 10:00
-tracking-log-54,2022/07/10 10:00,Test step,7,PENDING,' or 'A' = 'A,claim-10,true,2022/07/10 10:00
-tracking-log-55,2022/07/10 10:00,Test step,8,PENDING,http://lorem.com/ipsum,claim-10,true,2022/07/10 10:00
-tracking-log-56,2022/07/10 10:00,Test step,9,PENDING,ftp://a,claim-10,true,2022/07/10 10:00
-tracking-log-57,2022/07/10 10:00,Test step,10,PENDING,ftp://a.b,claim-10,true,2022/07/10 10:00
-tracking-log-58,2022/07/10 10:00,Test step,11,PENDING,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",claim-10,true,2022/07/10 10:00
-tracking-log-59,2022/07/10 10:00,Test step,12,PENDING,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",claim-10,true,2022/07/10 10:00
-tracking-log-60,2022/07/10 10:00,Test step,13,PENDING,https://www.lorem-ipsum.org,claim-10,true,2022/07/10 10:00
-tracking-log-61,2022/07/10 10:00,Test step,14,PENDING,ftp://www.lorem-ipsum.org,claim-10,true,2022/07/10 10:00
-tracking-log-62,2022/07/10 10:00,Test step,15,PENDING,http://www.lorem-ipsum.org/dolor/sit.html,claim-10,true,2022/07/10 10:00
-tracking-log-63,2022/07/10 10:00,Test step,16,PENDING,http://www.lorem-ipsum.org/dolor/sit.html#dolor,claim-10,true,2022/07/10 10:00
-tracking-log-64,2022/07/10 10:00,Test step,17,PENDING,http://example.org?a=1&b=2,claim-10,true,2022/07/10 10:00
-tracking-log-65,2022/07/10 10:00,Test step,18,PENDING,http://example.org?,claim-10,true,2022/07/10 10:00
-tracking-log-66,2022/07/10 10:00,Test step,19,PENDING,http://example.org?a,claim-10,true,2022/07/10 10:00
-tracking-log-67,2022/07/10 10:00,Test step,20,PENDING,http://example.org?a&b,claim-10,true,2022/07/10 10:00
-tracking-log-68,2022/07/10 10:00,Test step,21,PENDING,http://example.org/,claim-10,true,2022/07/10 10:00
-tracking-log-69,2022/07/10 10:00,Test step,22,PENDING,http://example.org/a,claim-10,true,2022/07/10 10:00
-tracking-log-70,2022/07/10 10:00,Test step,23,PENDING,http://example.org/a/b,claim-10,true,2022/07/10 10:00
-tracking-log-71,2022/07/10 10:00,Test step,24,PENDING,http://example.org/a/b?,claim-10,true,2022/07/10 10:00
-tracking-log-72,2022/07/10 10:00,Test step,25,PENDING,http://example.org/a/b?a&b,claim-10,true,2022/07/10 10:00
-tracking-log-73,2022/07/10 10:00,Test step,26,PENDING,acme@lorem-ipsum.org,claim-10,true,2022/07/10 10:00
-tracking-log-74,2022/07/10 10:00,Test step,27,PENDING,acme:password@lorem-ipsum.org,claim-10,true,2022/07/10 10:00
-tracking-log-75,2022/07/10 10:00,Test step,28,PENDING,a@b.e,claim-10,true,2022/07/10 10:00
-tracking-log-76,2022/07/10 10:00,Test step,29,PENDING,a@b.es,claim-10,true,2022/07/10 10:00
-tracking-log-77,2022/07/10 10:00,Test step,30,PENDING,a@b.esx,claim-10,true,2022/07/10 10:00
-tracking-log-78,2022/07/10 10:00,Test step,31,PENDING,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,claim-10,true,2022/07/10 10:00
-tracking-log-79,2022/07/10 10:00,Test step,32,PENDING,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,claim-10,true,2022/07/10 10:00
+tracking-log-48,2022/07/10 10:00,Test step,1,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",claim-10,true,2022/01/01 10:00
+tracking-log-49,2022/07/10 10:00,Test step,2,PENDING,โลเร็ม อิปซัม,claim-10,true,2022/01/02 10:00
+tracking-log-50,2022/07/10 10:00,Test step,3,PENDING,لوريم إيبسوم,claim-10,true,2022/01/03 10:00
+tracking-log-51,2022/07/10 10:00,Test step,4,PENDING,洛伦·伊普森,claim-10,true,2022/01/04 10:00
+tracking-log-52,2022/07/10 10:00,Test step,5,PENDING,<marquee>Hacked</marquee>,claim-10,true,2022/01/05 10:00
+tracking-log-53,2022/07/10 10:00,Test step,6,PENDING,<script>alert(‘Hacked!’);</script>,claim-10,true,2022/01/06 10:00
+tracking-log-54,2022/07/10 10:00,Test step,7,PENDING,' or 'A' = 'A,claim-10,true,2022/01/07 10:00
+tracking-log-55,2022/07/10 10:00,Test step,8,PENDING,http://lorem.com/ipsum,claim-10,true,2022/01/08 10:00
+tracking-log-56,2022/07/10 10:00,Test step,9,PENDING,ftp://a,claim-10,true,2022/01/09 10:00
+tracking-log-57,2022/07/10 10:00,Test step,10,PENDING,ftp://a.b,claim-10,true,2022/01/10 10:00
+tracking-log-58,2022/07/10 10:00,Test step,11,PENDING,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",claim-10,true,2022/01/11 10:00
+tracking-log-59,2022/07/10 10:00,Test step,12,PENDING,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",claim-10,true,2022/01/12 10:00
+tracking-log-60,2022/07/10 10:00,Test step,13,PENDING,https://www.lorem-ipsum.org,claim-10,true,2022/01/13 10:00
+tracking-log-61,2022/07/10 10:00,Test step,14,PENDING,ftp://www.lorem-ipsum.org,claim-10,true,2022/01/14 10:00
+tracking-log-62,2022/07/10 10:00,Test step,15,PENDING,http://www.lorem-ipsum.org/dolor/sit.html,claim-10,true,2022/01/15 10:00
+tracking-log-63,2022/07/10 10:00,Test step,16,PENDING,http://www.lorem-ipsum.org/dolor/sit.html#dolor,claim-10,true,2022/01/16 10:00
+tracking-log-64,2022/07/10 10:00,Test step,17,PENDING,http://example.org?a=1&b=2,claim-10,true,2022/01/17 10:00
+tracking-log-65,2022/07/10 10:00,Test step,18,PENDING,http://example.org?,claim-10,true,2022/01/18 10:00
+tracking-log-66,2022/07/10 10:00,Test step,19,PENDING,http://example.org?a,claim-10,true,2022/01/19 10:00
+tracking-log-67,2022/07/10 10:00,Test step,20,PENDING,http://example.org?a&b,claim-10,true,2022/01/20 10:00
+tracking-log-68,2022/07/10 10:00,Test step,21,PENDING,http://example.org/,claim-10,true,2022/01/21 10:00
+tracking-log-69,2022/07/10 10:00,Test step,22,PENDING,http://example.org/a,claim-10,true,2022/01/22 10:00
+tracking-log-70,2022/07/10 10:00,Test step,23,PENDING,http://example.org/a/b,claim-10,true,2022/01/23 10:00
+tracking-log-71,2022/07/10 10:00,Test step,24,PENDING,http://example.org/a/b?,claim-10,true,2022/01/24 10:00
+tracking-log-72,2022/07/10 10:00,Test step,25,PENDING,http://example.org/a/b?a&b,claim-10,true,2022/01/25 10:00
+tracking-log-73,2022/07/10 10:00,Test step,26,PENDING,acme@lorem-ipsum.org,claim-10,true,2022/01/26 10:00
+tracking-log-74,2022/07/10 10:00,Test step,27,PENDING,acme:password@lorem-ipsum.org,claim-10,true,2022/01/27 10:00
+tracking-log-75,2022/07/10 10:00,Test step,28,PENDING,a@b.e,claim-10,true,2022/01/28 10:00
+tracking-log-76,2022/07/10 10:00,Test step,29,PENDING,a@b.es,claim-10,true,2022/01/29 10:00
+tracking-log-77,2022/07/10 10:00,Test step,30,PENDING,a@b.esx,claim-10,true,2022/01/30 10:00
+tracking-log-78,2022/07/10 10:00,Test step,31,PENDING,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,claim-10,true,2022/01/31 10:00
+tracking-log-79,2022/07/10 10:00,Test step,32,PENDING,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,claim-10,true,2022/02/01 10:00

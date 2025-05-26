@@ -76,7 +76,7 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 				if (trackingLog.getClaim() != null) {
 					boolean checkTrackingLog = trackingLog.isDraftMode() || !trackingLog.getClaim().isDraftMode();
 
-					super.state(context, checkTrackingLog, "draftMode", "acme.validation.trackingLog.draftMode.checkTrackingLog");
+					super.state(context, checkTrackingLog, "status", "acme.validation.trackingLog.draftMode.checkTrackingLog");
 				}
 
 			}
@@ -84,6 +84,7 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 			{
 				List<TrackingLog> claimTrackingLogs;
 				boolean checkCompleted;
+				long completedTrackingLogs;
 
 				claimTrackingLogs = this.repository.findAllByClaimId(trackingLog.getClaim().getId());
 
@@ -99,11 +100,11 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 				// Ordenamos por fecha de creación para poder saber cual se ha creado antes
 				claimTrackingLogs.sort(Comparator.comparing(t -> t.getCreationMoment()));
 
-				// Nos quedamos con los completados
-				claimTrackingLogs.removeIf(t -> t.getResolutionPercentage() != 100.00);
+				// Contamos los completados para comprobar que solo hayan como máximo 2
+				completedTrackingLogs = claimTrackingLogs.stream().filter(t -> t.getResolutionPercentage() == 100.00).count();
 
 				// Solo puede haber un máximo de 2 tracking logs completados.
-				checkCompleted = claimTrackingLogs.size() <= 2;
+				checkCompleted = completedTrackingLogs <= 2;
 
 				super.state(context, checkCompleted, "status", "acme.validation.trackingLog.status.checkMaxCompleted");
 
@@ -120,12 +121,12 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 
 						if (currentTrackingLog.getResolutionPercentage() == 100.00 && nextTrackingLog.getResolutionPercentage() == 100.00)
 							// Comprobamos que el tracking log anterior se haya publicado
-							super.state(context, !currentTrackingLog.isDraftMode(), "draftMode", "acme.validation.trackingLog.draftMode.checkPublished");
+							super.state(context, !currentTrackingLog.isDraftMode(), "status", "acme.validation.trackingLog.draftMode.checkPublished");
 						else {
 							// TODO: Arreglar esto
 							// Comprobamos que el resolutionPercentage del siguiente sea mayor que el anterior (están ordenador por fecha)
-							boolean growingPercentage = nextTrackingLog.getResolutionPercentage() > currentTrackingLog.getResolutionPercentage();
-							super.state(context, !growingPercentage, "resolutionPercentage", "acme.validation.trackingLog.resolutionPercentage.growingPercentage");
+							boolean growingPercentage = currentTrackingLog.getResolutionPercentage() < nextTrackingLog.getResolutionPercentage();
+							super.state(context, growingPercentage, "resolutionPercentage", "acme.validation.trackingLog.resolutionPercentage.growingPercentage");
 						}
 
 					}

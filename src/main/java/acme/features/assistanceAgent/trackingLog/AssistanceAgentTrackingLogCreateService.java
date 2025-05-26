@@ -76,7 +76,6 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 
 	@Override
 	public void validate(final TrackingLog trackingLog) {
-		// TODO: Corregir esto
 
 	}
 
