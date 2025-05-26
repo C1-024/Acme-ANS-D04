@@ -1,7 +1,6 @@
 
 package acme.features.assistanceAgent.trackingLog;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,20 +76,7 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 
 	@Override
 	public void validate(final TrackingLog trackingLog) {
-		boolean allTrackingLogsPublished;
-		int claimId;
-		Collection<TrackingLog> trackingLogs;
-
-		allTrackingLogsPublished = true;
-		claimId = trackingLog.getClaim().getId();
-		trackingLogs = this.repository.findAllTrackingLogsByClaimId(claimId);
-
-		for (TrackingLog element : trackingLogs)
-			if (element.isDraftMode())
-				allTrackingLogsPublished = false;
-
-		if (!allTrackingLogsPublished)
-			super.state(allTrackingLogsPublished, "*", "assistance-agent.tracking-log.form.error.allTrackingLogsPublished");
+		// TODO: Corregir esto
 
 	}
 

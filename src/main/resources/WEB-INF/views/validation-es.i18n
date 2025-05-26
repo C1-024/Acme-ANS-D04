@@ -13,8 +13,11 @@ acme.validation.trackinLog.validResolution.required = La resolución es obligato
 acme.validation.trackingLog.draftMode.checkTrackingLog = La reclamación debe estar publicada antes de publicar un registro de seguimiento
 acme.validation.trackingLog.status.checkCompleted = El porcentaje de resolución debe ser 100% en registros de seguimiento completados
 acme.validation.trackingLog.status.checkPending = El porcentaje de resolución debe ser menor de 100% en registros de seguimiento pendientes
+acme.validation.trackingLog.status.checkMaxCompleted = Solo pueden haber dos tracking logs completados por reclamación
+acme.validation.trackingLog.draftMode.checkPublished = El anterior registro de seguimiento completado debe estar publicado
+acme.validation.trackingLog.resolutionPercentage.growingPercentage = El porcentaje de resolución debe ser mayor al anterior
 
-acme.validation.claim.leg.draftAndmoment = El tramo asociado a la reclamación debe ser en el pasado y estar publicada
+acme.validation.claim.leg.draftModeMoment = El tramo asociado a la reclamación debe ser en el pasado y publicado
 
 acme.validation.assistanceAgent.employeeCode.initials = Las dos primeras letras del código de empleado deben ser las iniciales de su nombre
 

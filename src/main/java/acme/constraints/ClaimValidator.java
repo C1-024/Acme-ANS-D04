@@ -28,9 +28,9 @@ public class ClaimValidator extends AbstractValidator<ValidClaim, Claim> {
 		else if (claim.getLeg() != null) {
 			boolean checkLeg;
 			Leg claimLeg = claim.getLeg();
-			checkLeg = MomentHelper.compare(MomentHelper.getCurrentMoment(), claimLeg.getScheduledArrival()) > 0 && claimLeg.getDraftMode() == false ? true : false;
+			checkLeg = MomentHelper.compare(MomentHelper.getCurrentMoment(), claimLeg.getScheduledArrival()) > 0 && claimLeg.getDraftMode().equals(false);
 
-			super.state(context, checkLeg, "leg", "acme.validation.claim.leg.draftAndmoment");
+			super.state(context, checkLeg, "leg", "acme.validation.claim.leg.draftModeMoment");
 		}
 
 		result = !super.hasErrors(context);

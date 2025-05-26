@@ -13,8 +13,11 @@ acme.validation.trackinLog.validResolution.required = The resolution is mandator
 acme.validation.trackingLog.draftMode.checkTrackingLog = Claim must be published before publish a tracking log
 acme.validation.trackingLog.status.checkCompleted = The resolution percentage must be 100% in completed tracking logs
 acme.validation.trackingLog.status.checkPending = The resolution percentage must be lower than 100% in pending tracking logs
+acme.validation.trackingLog.status.checkMaxCompleted = There can only be two  tracking logs completed per claim
+acme.validation.trackingLog.draftMode.checkPublished = The previous completed tracking log must be published
+acme.validation.trackingLog.resolutionPercentage.growingPercentage = The resolution percentage must be higher than the previous one
 
-acme.validation.claim.leg.draftAndmoment = The leg associated with the claim must be in the past and published
+acme.validation.claim.leg.draftModeMoment = The leg associated with the claim must be in the past and published
 
 acme.validation.assistanceAgent.employeeCode.initials = The two first characters of the employee code must be your name initials
 
